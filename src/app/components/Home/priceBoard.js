@@ -12,11 +12,11 @@ function PriceBoard() {
     ]);
 
     return (
-        <div className="max-w-4xl mx-auto mt-10 p-8 bg-gray-800 text-white rounded-lg shadow-lg">
+        <div className="max-w-4xl mx-auto mt-10 p-8 bg-zinc-900 text-white rounded-lg shadow-lg">
             <h2 className="text-3xl font-bold text-center mb-6">Tarifas de Servicios</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {services.map(service => (
-                    <div key={service.id} className="bg-gray-700 p-4 rounded-lg flex justify-between items-center transition duration-300 ease-in-out hover:bg-gray-600">
+                    <div key={service.id} className="cursor-pointer bg-white text-black p-4 rounded-lg flex justify-between items-center transition duration-300 ease-in-out hover:bg-yellow-600">
                         <span className="text-lg">{service.name}</span>
                         <span className="font-semibold text-xl">${service.price}</span>
                     </div>

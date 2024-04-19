@@ -1,33 +1,39 @@
 import React from 'react';
-import Link from 'next/link';
-import { FaHandScissors } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className=" bg-gradient-radial from-black  to-zinc-950 text-white mt-8 py-4">
-      <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-        <div className="flex flex-col md:flex-row items-center">
-          <Link href="/" className="flex items-center space-x-2">
-            <FaHandScissors className="h-6 w-6 text-yellow-500" />
-            <span className="font-bold text-xl">TuLogo</span>
-          </Link>
-          <nav className="mt-4 md:mt-0 md:ml-6 space-x-4">
-            <Link href="/about" className="hover:text-yellow-500 transition duration-300">Inicio</Link>
-            <Link href="/services" className="hover:text-yellow-500 transition duration-300">Servicios</Link>
-            <Link href="/contact" className="hover:text-yellow-500 transition duration-300">Contacto</Link>
-          </nav>
+    <footer className="bg-black text-white p-4 mt-[6rem]">
+      <hr className='text-white h-1'></hr>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-wrap justify-between items-center">
+          <div className="p-5">
+            <h3 className="text-lg font-semibold">Barbería Estilo</h3>
+            <p className="mt-1">La mejor experiencia para tu estilo.</p>
+          </div>
+          <div className="p-5">
+            <h3 className="text-lg font-semibold">Contacto</h3>
+            <ul>
+              <li>Teléfono: +1 234 567 890</li>
+              <li>Email: contacto@barberiaestilo.com</li>
+              <li>Dirección: Av. Principal 123, Ciudad, País</li>
+            </ul>
+          </div>
+          <div className="p-5">
+            <h3 className="text-lg font-semibold">Redes Sociales</h3>
+            <div className="flex space-x-4 mt-2">
+              <a href="#" className="hover:text-gray-300"><FaFacebookF /></a>
+              <a href="#" className="hover:text-gray-300"><FaInstagram /></a>
+              <a href="#" className="hover:text-gray-300"><FaTwitter /></a>
+            </div>
+          </div>
         </div>
-        <div className="text-center md:text-right">
-          <p>Dirección: 123 Calle Ficticia, Montevideo, Uruguay</p>
-          <p>Teléfono: +598 123 4567</p>
-          <p>Email: contacto@tulogo.com</p>
+        <div className="text-center pt-5 border-t border-gray-700">
+          <p>© 2024 Barbería Estilo. Todos los derechos reservados.</p>
         </div>
-      </div>
-      <div className="text-center py-4 border-t border-gray-700">
-        <p>&copy; {new Date().getFullYear()} TuBarber. Todos los derechos reservados.</p>
       </div>
     </footer>
   );
-};
+}
 
 export default Footer;
