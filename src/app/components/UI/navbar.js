@@ -1,7 +1,8 @@
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { FaHandScissors, FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
+import Image from 'next/image';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,8 +16,7 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between p-4">
         <div className="font-bold text-xl">
           <Link href="/" className='flex items-center space-x-2'>
-            <FaHandScissors className='h-6 w-6' />
-            <span>TuLogo</span>
+         <Image className='object-fit w-16 h-16' height={210} width={210} src='/brand.png'></Image>
           </Link>
         </div>
         <div className="hidden md:flex items-center space-x-6">
